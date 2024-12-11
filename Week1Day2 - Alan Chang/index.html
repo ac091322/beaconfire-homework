@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week1Day1</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        #table-1 tr>td:nth-child(2n+1) {
+            background-color: rgb(122, 178, 211);
+        }
+
+        #table-1 tr>td:nth-child(2n) {
+            background-color: rgb(185, 229, 232);
+        }
+
+        #table-1 tr>th:nth-child(odd) {
+            background-color: rgb(122, 178, 211);
+        }
+
+        #table-1 tr>th:nth-child(even) {
+            background-color: rgb(185, 229, 232);
+        }
+
+        #table-2 tr>th {
+            width: 200px;
+        }
+
+        ol li:nth-child(odd):hover {
+            background-color: yellow;
+        }
+
+        ol li:nth-child(even):hover::first-letter {
+            color: red;
+            font-size: 35px;
+        }
+
+        fieldset:not(:has(select)) {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        fieldset>label:not(:has(input[type="radio"])) {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        fieldset>div {
+            display: flex;
+            gap: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2>Short Answer</h2>
+        <div><-- See folder directory for SAQs.pdf file --></div>
+        <a href="./SAQs.pdf" target="_blank">or click here</a>
+    </section>
+
+    <br />
+    <br />
+    <br />
+
+    <section>
+        <h2>Question 1</h2>
+
+        <table id="table-1" border="1">
+            <caption>Alan's Schedule</caption>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Breakfast</b></td>
+                    <td>in lair</td>
+                    <td>with cronies</td>
+                    <td>in lair</td>
+                    <td>in lair</td>
+                    <td>in lair</td>
+                </tr>
+                <tr>
+                    <td><b>Morning</b></td>
+                    <td colspan="2">design traps</td>
+                    <td colspan="3">improve hideout</td>
+                </tr>
+                <tr>
+                    <td><b>Afternoon</b></td>
+                    <td>train minions</td>
+                    <td>train minions</td>
+                    <td>train minions</td>
+                    <td>train minions</td>
+                    <td rowspan="2">world domination</td>
+                </tr>
+                <tr>
+                    <td><b>Evening</b></td>
+                    <td>manaical<br />laughter</td>
+                    <td>manaical<br />laughter</td>
+                    <td>manaical<br />laughter</td>
+                    <td>manaical<br />laughter</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="text-align: center; background-color: rgb(74, 98, 138); color: white;" colspan="6">
+                        Just adding a footer to see how it looks...
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </section>
+
+    <br />
+    <br />
+    <br />
+
+    <section style="width: 300px;">
+        <h2>Question 2</h2>
+
+        <!-- In order to get the individual lines of of the <li> tag to be highlighted while not affecting its children <li> tags, I had to separate the <ol> tags and make them sibling to the <li> tag, as such <li></li><ol></ol>, instead of nesting them inside the <li> tag, as such <li><ol></ol></li>. I think the better way to do it is to nest the <ol> tags inside the <li> tags when they are sub-bullets/lists, but to make it look like the homework assignment, I took them out. When nesting the <ol> tags (with their children) inside the <li> tags, the default behavior is that the children <li> tags of those <ols> will inherit the parent <li> tag's style, such as the yellow highlight. I tried a bunch of different ways, including using the :not pseudo-class selector to not select its children, as well as directly giving its children a background-color of transparent, but these did not work. -->
+
+        <ol type="I">
+            <li>Background Skills</li>
+            <ol type="A">
+                <li>Unix Commands</li>
+                <li>Vim Text Editor</li>
+            </ol>
+            <li>HTML</li>
+            <ol type="A">
+                <li>Minimal Page</li>
+                <li>Headings</li>
+                <li>Tags</li>
+                <li>Lists</li>
+                <ol type="i">
+                    <li>Unordered</li>
+                    <li>Ordered</li>
+                    <li>Definition</li>
+                    <li>Nested</li>
+                </ol>
+                <li>Links</li>
+                <ol type="i">
+                    <li>Absolute</li>
+                    <li>Relative</li>
+                </ol>
+                <li>Images</li>
+            </ol>
+            <li>CSS</li>
+            <ol type="A">
+                <li>Anatomy</li>
+                <li>Basic Selectors</li>
+                <ol type="i">
+                    <li>Element</li>
+                    <li>Class</li>
+                    <li>ID</li>
+                    <li>Group</li>
+                </ol>
+                <li>The DOM</li>
+                <li>Advanced Selectors</li>
+                <li>Box Model</li>
+            </ol>
+            <li>Programming</li>
+            <ol type="A">
+                <li>Python</li>
+                <li>JavaSript</li>
+            </ol>
+            <li>Database</li>
+            <ol type="A">
+                <li>Flat File</li>
+                <li>Relational</li>
+            </ol>
+        </ol>
+    </section>
+
+    <br />
+    <br />
+    <br />
+
+    <section>
+        <h2>Question 3</h2>
+        <span>Click on the "web" folder to go to its page and view its subfolders</span>
+        <br />
+        <br />
+
+        <table id="table-2" border="1">
+            <caption>Simple File Manager</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Date Modified</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="fa-solid fa-folder"></i>&nbsp;<a href="/web/" target="_blank">web/</a></td>
+                    <td style="text-align: center;">—</td>
+                    <td style="text-align: center;">5/19/05, 7:00:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </section>
+
+    <br />
+    <br />
+    <br />
+
+    <section>
+        <h2>Question 4</h2>
+
+        <h3>Application for permission to date my daughter</h3>
+        <span><b>Note:</b> <em>Form is to be completed at least 21 days prior to date</em></span>
+        <br />
+        <br />
+
+        <form>
+            <fieldset>
+                <br />
+                <div style="margin: 0px;">Personal Details</div>
+                <br />
+                <label> Name:
+                    <input type="text" placeholder="Enter name here" />
+                </label>
+
+                <label> Address:
+                    <input type="text" placeholder="Enter address here" />
+                </label>
+
+                <label> Email:
+                    <input type="email" placeholder="Enter email here" />
+                </label>
+
+                <label> Phone Number:
+                    <input type="number" placeholder="Enter 10 digit number" />
+                </label>
+
+                <label> IQ:
+                    <input type="number" placeholder="Enter IQ here" />
+                </label>
+
+                <label>Gender</label>
+                <label>
+                    <input type="radio" value="male" name="gender" checked />
+                    Male
+                </label>
+                <label>
+                    <input type="radio" value="female" name="gender" />
+                    Female
+                </label>
+                <label style="margin-bottom: 10px;">
+                    <input type="radio" value="other" name="gender" />
+                    Other
+                </label>
+
+                <label> Date of Proposed Outing:
+                    <input type="date" />
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <br />
+                <div style="margin: 0px;">Check All That Apply</div>
+                <br />
+
+                <label>
+                    <input type="checkbox">
+                    I have tattoos and/or piercings
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    I am more than 2 years older than my daughter
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    I own a panel van or V8 ute
+                </label>
+
+                <label>
+                    <input type="checkbox" checked>
+                    I work full-time
+                </label>
+
+                <label>
+                    <input type="checkbox" checked>
+                    My parents are rich
+                </label>
+
+                <label>
+                    <input type="checkbox" checked>
+                    The date is at a well-lit public location
+                </label>
+            </fieldset>
+
+            <fieldset
+                style="padding-bottom: 20px;"">
+                <br />
+
+                <!-- It's weird, my autoformater does not format this block of code correctly. If I keep this comment block here and auto format, it looks correct. But when I remove this comment block and auto-format, it adds a space before "_politics" and the <optgroup> tags do not indent correctly. Strangest thing! -->
+
+                    <label>Political Persuasion:
+                    <select name="politics">
+                        <optgroup label="Left-Leaning">
+                            <option>Left Wing</option>
+                            <option>Anarchist</option>
+                        </optgroup>
+                        <optgroup label="Right-Leaning">
+                            <option>Right Wing</option>
+                            <option>Conservative</option>
+                        </optgroup>
+                    </select>
+                </label>
+
+                <label>Education Level Completed:
+                    <select name="education">
+                        <option>University/College</option>
+                        <option>High School</option>
+                        <option>None</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <br />
+                <div style="margin: 0px;">Essay Section</div>
+                <br />
+
+                <p style="margin-bottom: 5px;">In 50 words or more explain why you want to date my daughter</p>
+                <textarea style="resize: vertical; width: 500px; height: 100px"
+                    placeholder="Enter text here" /></textarea>
+
+                <p style="margin-top: 10px; margin-bottom: 5px;">Please upload contact details for 2 references</p>
+                <textarea style="resize: vertical; width: 500px; height: 100px;"
+                    placeholder="Enter text here"></textarea>
+
+                <div>
+                    <span>Upload police clearance certificate, bank statement, and medical certificates here:</span>
+                    <input type="file">
+                </div>
+                <br />
+            </fieldset>
+
+            <button type=button onclick="return false" style="margin-top: 20px;">Send your application</button>
+        </form>
+    </section>
+
+    <br />
+    <br />
+    <br />
+
+    <section>
+        <h2>Question 5</h2>
+        <div><-- See directory for screenshot of HTML quiz --></div>
+        <a href="./html-quiz-screenshot.png" target="_blank">or click here</a>
+    </section>
+
+    <footer style="height: 200px"></footer>
+</body>
+
+</html>
