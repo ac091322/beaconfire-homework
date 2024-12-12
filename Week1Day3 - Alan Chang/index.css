@@ -1,0 +1,31 @@
+@import url("./question1.css");
+@import url("./question2.css");
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 10px;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+li {
+    list-style-type: none;
+}
+
+hr {
+    color: #444444;
+    border-bottom: 1px solid #444444;
+}

@@ -1,0 +1,93 @@
+#section-question-2>div {
+    width: 80%;
+}
+
+#grid-container-2 {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "nav article";
+    margin-bottom: 200px;
+}
+
+#grid-container-2>nav {
+    grid-area: nav;
+    background-color: rgb(235, 235, 235);
+}
+
+#grid-container-2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#grid-container-2 li {
+    margin: 0 15px;
+}
+
+#grid-container-2 a {
+    text-decoration: none;
+    color: #444444;
+    cursor: pointer;
+}
+
+#outer-container {
+    grid-area: article;
+    background-color: rgb(249, 249, 249);
+    height: 1000px;
+    border-left: 3px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 950px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#grid-container-2 article {
+    margin-left: 30px;
+}
+
+#grid-container-2 h2 {
+    margin-bottom: 10px;
+}
+
+#grid-container-2 p {
+    line-height: 40px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    #grid-container-2 {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nav"
+            "article";
+    }
+
+    #grid-container-2>nav {
+        height: 283px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    #grid-container-2 li {
+        align-self: center;
+    }
+
+    #outer-container {
+        border-left: 0;
+        border-top: 3px solid gray;
+    }
+}
+
+/*
+In the bottom last part of the homework image, I'm not exactly sure what the line/bar under the poem title "The New Colossus" is in the mobile/tablet view. It looks like an underline, but not quite. It could be a scroll bar, but why add a horizontal scroll bar on a mobile/tablet view. I do see that the actual text of the poem for The New Colossus is a pragraph style in the homework image (unlike the line by line style for The Raven poem's text), so maybe that's why there might be vertical scrolling. But it's still weird to put vertical scrolling when we can just wrap the text for a paragraph block. Plus the horizontal bar looks different than the default vertical scroll bars. I'm going to assume it's a cut-off error!
+*/

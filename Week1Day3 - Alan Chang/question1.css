@@ -1,0 +1,55 @@
+#section-question-1>div {
+    color: gray;
+    width: 80%;
+}
+
+/* I would assume we want the columns to be stretchable while the rows are fixed. */
+#grid-container-1 {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 100px 600px 50px;
+    grid-template-areas:
+        "header header header"
+        "nav article aside"
+        "footer footer footer";
+}
+
+#grid-container-1>div {
+    grid-area: header;
+    background-color: rgb(142, 197, 79);
+    line-height: 100px;
+    padding-left: 50px;
+}
+
+#grid-container-1>nav {
+    grid-area: nav;
+    background-color: rgb(244, 243, 219);
+    line-height: 600px;
+    padding-left: 50px;
+}
+
+#grid-container-1>article {
+    grid-area: article;
+    padding: 20px;
+}
+
+#grid-container-1>article>p {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 490px;
+}
+
+#grid-container-1>aside {
+    grid-area: aside;
+    background-color: rgb(244, 243, 219);
+    line-height: 600px;
+    padding-left: 50px;
+}
+
+#grid-container-1>footer {
+    grid-area: footer;
+    background-color: yellow;
+    line-height: 50px;
+    padding-left: 50px;
+}
