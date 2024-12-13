@@ -1,0 +1,18 @@
+$margin: 0 0
+$max-width: 1000px
+
+@mixin margin-width-styles($margin)
+    margin: $margin
+    width: 100%
+    max-width: $max-width
+
+table
+    @include margin-width-styles($margin)
+
+    tr
+        text-align: center
+
+hr
+    @include margin-width-styles($margin)
+    margin-top: 7px
+    max-width: $max-width
