@@ -1,11 +1,11 @@
-// even if thre is only one element and the length is 1, it is still an HTML collection
+// even if there is only one element and the length is 1, it is still an HTML collection
 const parentTBody = document.getElementsByTagName("tbody")[0];
 
 // querySelectorAll returns a node list, which does not upate when a new node is created so must use an HTML collection instead
 // const deleteButtons = document.querySelectorAll(".product button");
 
 // const deleteButtons = parentTBody.getElementsByTagName("button");
-// must convert HTML collection to an array before doing.forEach(), but still does not work because delete buttons are being attached only to the initial buttons and not the new ones
+// must convert HTML collection to an array before doing .forEach(), but still does not work because delete buttons are being attached only to the initial buttons and not the new ones
 // Array.from(deleteButtons).forEach(button => {
 //     button.addEventListener("click", () => {
 //         const productTr = button.parentNode.parentNode;
