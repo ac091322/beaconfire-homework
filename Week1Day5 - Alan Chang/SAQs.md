@@ -83,7 +83,7 @@ for (var i = 0; i < 3; i++) {
 
 ## 10. Can you name the new ES6 features?
 
-ES6 features include: `let` and `const`; arrow functions; template literals; `Map` and `Set`; array and object destructuring; spread nad rest operators; default function paramters; generators; classes; `Promises` and `async/await`; and module importing and exporting.
+ES6 features include: `let` and `const`; arrow functions; template literals; `Map` and `Set`; array and object destructuring; spread and rest operators; default function paramters; generators; classes; `Promises` and `async/await`; and module importing and exporting.
 
 ## 11. What are generators and generator functions?
 

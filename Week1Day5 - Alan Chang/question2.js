@@ -70,7 +70,7 @@ class VehicleES6 {
 
     // add the .info() instance method to the VehicleES6 class
     info() {
-        console.log(`The engine type for this vehicle is ${this.engine}. that can ${this.speed} miles per hour.`);
+        console.log(`The engine type for this vehicle is ${this.engine} and can go up to ${this.speed} miles per hour.`);
     }
 }
 
@@ -105,11 +105,13 @@ console.log(myCarES61);  // output: CarES6 { engine: 'V12', speed: 200, wheels: 
 console.log(myCarES61 instanceof VehicleES6);  // output: true
 console.log(myCarES61 instanceof CarES6);  // output: true
 myCarES61.honk();  // output: Honk!
+myCarES61.info();  // output: The engine type for this vehicle is V12 and can go up to 200 miles per hour.
 
 // test static method isTesla()
 console.log(CarES6.isTesla(myCarES61));  // output: false;
 console.log(CarES6.isTesla(myCarES62));  // output: true;
 
 // test that isTesla() is not an instance method
+// must use the class to access it
 console.log(myCarES61.isTesla);  // output: undefined
 console.log(myCarES62.isTesla);  // output: undefined

@@ -1,6 +1,6 @@
 function hideCities() {
-    const cities = document.querySelectorAll(".city");
-    cities.forEach(city => {
+    const cities = document.getElementsByClassName("city");
+    Array.from(cities).forEach(city => {
         city.style.display = "none"
     });
 }

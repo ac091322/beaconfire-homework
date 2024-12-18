@@ -246,6 +246,7 @@
             if (anchorTag.getAttribute("href") && anchorTag.getAttribute("href").startsWith("#")) {
                 anchorTag.addEventListener("click", (e) => {
                     e.preventDefault();
+                    // get the "href" attribute from the anchor tag and slice off the # character at the first index so it can be used in .getElementById()
                     let targetId = anchorTag.getAttribute("href").substring(1);  // like .slice(start, end)
                     document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
                 });

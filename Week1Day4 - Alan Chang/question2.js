@@ -15,11 +15,12 @@ const parentTBody = document.getElementsByTagName("tbody")[0];
 
 // instead use event delegation
 parentTBody.addEventListener("click", (e) => {
-    // e.target --> <button>Delete</button>
-    // e.target.tagName will always return the tag in all caps
+    // e.target refers to the actual tag name that is clicked --> <button>Delete</button>
+    // e.target.tagName will always return the tag name in all caps
     if (e.target.tagName.toLowerCase() === "button") {
+        // this works because of propagation: events bubble up the DOM tree, starting from the clicked element (e.target) to its ancestors
         // find the closest <tr> ancestor, which is the <tr> for the product row
-        const productTr = e.target.closest('tr');
+        const productTr = e.target.closest("tr");
         productTr.remove();
     }
 });
@@ -57,9 +58,9 @@ addNewButton.addEventListener("click", (e) => {
     deleteButton.innerText = "Delete";
     deleteButtonTd.appendChild(deleteButton);
 
-    const newProductRow = document.createElement("tr");
-    newProductRow.append(productNameTd, productCategoryTd, productPriceTd, deleteButtonTd);
-    parentTBody.appendChild(newProductRow);
+    const newProductTr = document.createElement("tr");
+    newProductTr.append(productNameTd, productCategoryTd, productPriceTd, deleteButtonTd);
+    parentTBody.appendChild(newProductTr);
 
     document.getElementById("input-product-name").value = ""
     document.getElementById("input-product-category").value = ""
