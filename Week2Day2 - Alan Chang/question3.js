@@ -1,4 +1,4 @@
-const randomUserContainer = document.getElementById("container-random-user-data");
+export const randomUserContainer = document.getElementById("container-random-user-data");
 
 function delayedRequest(url) {
     setTimeout(() => {
