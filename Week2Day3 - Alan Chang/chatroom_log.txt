@@ -1,13 +1,13 @@
 Chatroom log started
 Broadcast: the user Alan has joined the chat.
-Broadcast: the user John has joined the chat.
-Alan: Hello there!
-Broadcast: the user Jane has joined the chat.
-Sending message to Jane | Alan says: Hello there!
 Sending message to John | Alan says: Hello there!
+Sending message to Jane | Alan says: Hello there!
+Broadcast: the user John has joined the chat.
+Broadcast: the user Jane has joined the chat.
 Sending message to Alan | John says: Howdy!
+Alan: Hello there!
+Sending message to Jane | John says: Howdy!
 Sending message to Alan | Jane says: What's up?
 John: Howdy!
-Sending message to Jane | John says: Howdy!
 Sending message to John | Jane says: What's up?
 Jane: What's up?
