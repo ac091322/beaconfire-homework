@@ -11,7 +11,7 @@ const randomNumbers = [];
 
 console.log(randomNumbers);
 
-
+// other encoding options include: ascii, base64, hex
 async function writeAndReadFile(filePath, dataToWrite, encoding = "utf8") {
     try {
         // fsPromise.writeFile(path, data, options)
@@ -33,7 +33,7 @@ async function writeAndReadFile(filePath, dataToWrite, encoding = "utf8") {
 
         // fsPromise.writeFile(path, data, options)
         // can include optional { encoding: "utf8" } as options
-        await fsPromise.writeFile(filePath, txtToArr.join("\n"), encoding);
+        await fsPromise.writeFile(filePath, txtToArr.join("\n"));
         console.log("Successfully updated file");
 
     } catch (error) {
