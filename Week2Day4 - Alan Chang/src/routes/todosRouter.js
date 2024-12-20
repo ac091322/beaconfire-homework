@@ -4,7 +4,7 @@ import { promises as fs } from 'fs';
 
 const todoRouter = express.Router();
 
-// Postman test file included in folder directory
+// Postman text collection exported and included in folder directory
 
 // test the /api/todos route
 todoRouter.get("/", (_req, res) => {
@@ -51,7 +51,6 @@ todoRouter.post("/post", async (req, res) => {
         // write the updated array back to the file
         await fs.writeFile("todos-data.json", JSON.stringify(todosList, null, 2));
         console.log("🚀🚀🚀🚀🚀 Successfully added todo to todo list");
-
         return res.status(201).json(newTodo);
 
     } catch (error) {
@@ -73,12 +72,13 @@ todoRouter.put("/:todoId/put", async (req, res) => {
     try {
         const data = await fs.readFile("todos-data.json", { encoding: "utf8" });
         const todos = JSON.parse(data);
-        const todoIdToEditId = todos.findIndex(todo => todo.id === Number(todoId));
+        const todoToEditId = todos.findIndex(todo => todo.id === Number(todoId));
 
-        if (todoIdToEditId === -1) return res.status(404).send(`Todo with ID ${todoId} not found`);
+        if (todoToEditId === -1) return res.status(404).send(`Todo with ID ${todoId} not found`);
 
         // update the todo at the found index with the new data
-        todos[todoIdToEditId] = { ...todos[todoIdToEditId], ...todoToEdit };
+        // copy todo at index todoToEditId, replace with new values coming from todoToEdit object
+        todos[todoToEditId] = { ...todos[todoToEditId], ...todoToEdit };
 
         await fs.writeFile("todos-data.json", JSON.stringify(todos, null, 2));
         return res.status(200).send(`Todo with ID ${todoId} successfully edited in file`);
@@ -102,6 +102,7 @@ todoRouter.patch("/:todoId/patch", async (req, res) => {
         if (todoToEditId === -1) return res.status(404).send(`Todo with with ID ${todoId} not found`);
 
         // update the status of the todo at the found index with the new status
+        // copy todo at index todoToEditId, replace previous status with newStatus
         todos[todoToEditId] = { ...todos[todoToEditId], ...newStatus };
 
         await fs.writeFile("todos-data.json", JSON.stringify(todos, null, 2));
@@ -119,12 +120,12 @@ todoRouter.delete("/:todoId/delete", async (req, res) => {
     try {
         const data = await fs.readFile("todos-data.json", { encoding: "utf8" });
         const todos = JSON.parse(data);
-        const todoIdToDelete = todos.findIndex(todo => todo.id === Number(todoId));
+        const todoToDeleteId = todos.findIndex(todo => todo.id === Number(todoId));
 
-        if (todoIdToDelete === -1) return res.status(404).send(`Todo of ID ${todoId} not found`);
+        if (todoToDeleteId === -1) return res.status(404).send(`Todo of ID ${todoId} not found`);
 
         // remove the todo from the todo array by splicing at its index and removing 1 item
-        todos.splice(todoIdToDelete, 1);
+        todos.splice(todoToDeleteId, 1);
 
         await fs.writeFile("todos-data.json", JSON.stringify(todos, null, 2));
         return res.status(200).send(`Todo with ID ${todoId} deleted from file`);
