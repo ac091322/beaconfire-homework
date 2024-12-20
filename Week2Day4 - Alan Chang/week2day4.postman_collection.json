@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "56a89e7c-89aa-47e9-a2b3-cb073a8e3ed4",
+		"name": "week2day4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34930416"
+	},
+	"item": [
+		{
+			"name": "home without api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "home with api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/404",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"404"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "todos test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/todos/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Todo #1\",\n    \"description\": \"This is the description for Todo #1.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos/post",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit todo by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Todo Title\",\n    \"description\": \"New todo description.\",\n    \"status\": \"DONE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos/1734672644499/put",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"1734672644499",
+						"put"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit todo by id Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"PATCHED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos/1734672644499/patch",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"1734672644499",
+						"patch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete todo by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Todo Title\",\n    \"description\": \"New todo description.\",\n    \"status\": \"DONE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos/1734672644499/delete",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"1734672644499",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

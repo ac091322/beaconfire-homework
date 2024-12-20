@@ -32,6 +32,8 @@ const filename = require("./file/path/filename");
 
 Finally, if you have a `.js` file that uses ES6 syntax for importing and exporting and in the `<script>` tag the type is set to `module`, but you also wish to use CommonJS syntax, you can change the file extension to `.cjs`. If you want Node.js to treat all `.js` files in the project folder as CommonJS modules, then go into the project folder's `package.json` file and add the line `{ "type": "commonjs" }` at the root level of the `JSON` object.
 
+The same can be done to convert a `.js` file to `.mjs` file.
+
 ## 5. How can you make the server automatically restart when files are modified?
 
 To make the server automatically restart, or to keep the server running when files are modified, we can use `nodemon`. `nodemon` is a convenient `npm` package that provides a CLI command to start a Node.js application and automatically restarts the server whenever it detects changes in the project files or directory. We use `npm i -D nodemon` to install `nodemon` as a local dependency, or `npm i -g nodemon` to install it globally. Then, we use `nodemon filename.js` to run the server.
