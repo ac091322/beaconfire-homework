@@ -1,6 +1,6 @@
 import express from "express";
 import morgan from "morgan";
-import todosRouter from "./routers/todosRouter.js";
+import todosRouter from "./routes/todosRouter.js";
 
 const app = express();
 

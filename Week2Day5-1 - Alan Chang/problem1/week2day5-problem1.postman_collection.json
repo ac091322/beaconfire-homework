@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "ce1eb249-9cab-43b2-82cf-de5aa3b16b74",
-		"name": "week2day5",
+		"name": "week2day5-problem1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "34930416"
 	},
@@ -103,13 +103,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/todos/6767a043808b5e1fb6840088/get",
+					"raw": "{{url}}/todos/6767bd0cdfe8a34e85eb506b/get",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"todos",
-						"6767a043808b5e1fb6840088",
+						"6767bd0cdfe8a34e85eb506b",
 						"get"
 					]
 				}
@@ -158,13 +158,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/todos/6767b7e88e7650390e087554/put",
+					"raw": "{{url}}/todos/6767bd0cdfe8a34e85eb506b/put",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"todos",
-						"6767b7e88e7650390e087554",
+						"6767bd0cdfe8a34e85eb506b",
 						"put"
 					]
 				}
@@ -186,13 +186,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/todos/6767b7e88e7650390e087554/patch",
+					"raw": "{{url}}/todos/6767bd0cdfe8a34e85eb506b/patch",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"todos",
-						"6767b7e88e7650390e087554",
+						"6767bd0cdfe8a34e85eb506b",
 						"patch"
 					]
 				}
@@ -214,13 +214,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/todos/6767b7e88e7650390e087554/delete",
+					"raw": "{{url}}/todos/6767bd0cdfe8a34e85eb506b/delete",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"todos",
-						"6767b7e88e7650390e087554",
+						"6767bd0cdfe8a34e85eb506b",
 						"delete"
 					]
 				}
