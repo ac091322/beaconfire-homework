@@ -18,6 +18,8 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
+
+export default app;
 ```
 
 To run the server, use `node app.js`, and a most basic Express server has been setup.

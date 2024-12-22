@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "ce1eb249-9cab-43b2-82cf-de5aa3b16b74",
+		"name": "week2day5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34930416"
+	},
+	"item": [
+		{
+			"name": "home without api path",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "home with api path",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/404",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"404"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "todos test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/todos/all/get",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"all",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get todo by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/todos/6767a043808b5e1fb6840088/get",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"6767a043808b5e1fb6840088",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Create Todo for MongoDB\",\n    \"description\": \"This is the description for this todo.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos/post",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit todo by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Updated Todo Title\",\n    \"description\": \"Edited todo description.\",\n    \"status\": \"UPDATED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos/6767b7e88e7650390e087554/put",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"6767b7e88e7650390e087554",
+						"put"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit todo by id Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"PATCHED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos/6767b7e88e7650390e087554/patch",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"6767b7e88e7650390e087554",
+						"patch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete todo by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Todo Title\",\n    \"description\": \"New todo description.\",\n    \"status\": \"DONE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos/6767b7e88e7650390e087554/delete",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"6767b7e88e7650390e087554",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -17,7 +17,7 @@ todoRouter.get("/all", async (_req, res) => {
         const data = await fs.readFile("todos-data.json", { encoding: "utf8" });
         return res.json(JSON.parse(data));
     } catch (error) {
-        return res.status(500).send(`${error}`);
+        return res.status(500).send(error);
     }
 });
 
@@ -54,7 +54,7 @@ todoRouter.post("/post", async (req, res) => {
         return res.status(201).json(newTodo);
 
     } catch (error) {
-        return res.status(500).send(`${error}`);
+        return res.status(500).send(error);
     }
 });
 
@@ -84,7 +84,7 @@ todoRouter.put("/:todoId/put", async (req, res) => {
         return res.status(200).send(`Todo with ID ${todoId} successfully edited in file`);
 
     } catch (error) {
-        return res.status(500).send(`Error: ${error}`);
+        return res.status(500).send(error);
     }
 });
 
@@ -109,7 +109,7 @@ todoRouter.patch("/:todoId/patch", async (req, res) => {
         return res.status(200).send(`Todo with ID ${todoId} edited in file`);
 
     } catch (error) {
-        return res.status(500).send(`${error}`);
+        return res.status(500).send(error);
     }
 });
 
@@ -131,9 +131,8 @@ todoRouter.delete("/:todoId/delete", async (req, res) => {
         return res.status(200).send(`Todo with ID ${todoId} deleted from file`);
 
     } catch (error) {
-        return res.status(500).send(`Error: ${error}`);
+        return res.status(500).send(error);
     }
-
 });
 
 
