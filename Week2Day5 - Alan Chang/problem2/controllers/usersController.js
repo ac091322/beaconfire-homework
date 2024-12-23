@@ -63,7 +63,7 @@ const updateUser = async (req, res) => {
         );
         if (!userToUpdate) return res.status(404).json({ Error: "User not found" })
 
-        return res.status(200).send(`User with ID ${userId} successfully edited in database`);
+        return res.status(200).send(`User ${userToUpdate.username} successfully edited in database`);
 
     } catch (error) {
         return res.status(500).send(`Error: ${error}`);
@@ -79,7 +79,7 @@ const deleteUser = async (req, res) => {
         const userToDelete = await User.findByIdAndDelete(userId);
         if (!userToDelete) return res.status(404).json({ Error: "User not found" });
 
-        return res.status(200).send(`User with ID ${userId} deleted from database`);
+        return res.status(200).send(`User ${userToDelete.username} deleted from database`);
 
     } catch (error) {
         return res.status(500).send(`Error: ${error}`);
@@ -201,10 +201,7 @@ const followArtist = async (req, res) => {
         });
 
         await newFollowing.save();
-        return res.status(201).json({
-            message: `You are now following ${artist.artist}`,
-            following: newFollowing
-        });
+        return res.status(201).json({ message: `You are now following ${artist.artist}`, following: newFollowing });
 
     } catch (error) {
         return res.status(500).send(`Error: ${error}`);

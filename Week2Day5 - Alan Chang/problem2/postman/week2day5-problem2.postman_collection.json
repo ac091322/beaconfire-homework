@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "ed2e0802-f1d7-40e7-a1d3-0a6da5a067f5",
+		"name": "week2day5-problem2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34930416"
+	},
+	"item": [
+		{
+			"name": "homepage without api path",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "home with api path",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users route test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/all/get",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"all",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/6769094c343ffb140e70ead2/get",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"6769094c343ffb140e70ead2",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"newuser\",\n    \"email\": \"new@beaconfire.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/post",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"updated username\",\n    \"email\": \"updated@beaconfire.com\",\n    \"password\": \"PASSWORD\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/67690b21f7f34a40c100cc84/put",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"67690b21f7f34a40c100cc84",
+						"put"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a user by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/67690b21f7f34a40c100cc84/delete",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"67690b21f7f34a40c100cc84",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get likes by user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/6769094c343ffb140e70ead2/likes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"6769094c343ffb140e70ead2",
+						"likes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like song by user id and song id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/6769094c343ffb140e70ead2/like/6769095a0cb5c6bc175a5c11",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"6769094c343ffb140e70ead2",
+						"like",
+						"6769095a0cb5c6bc175a5c11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unlike song by user id and song id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/6769094c343ffb140e70ead2/unlike/6769095a0cb5c6bc175a5c11",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"6769094c343ffb140e70ead2",
+						"unlike",
+						"6769095a0cb5c6bc175a5c11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get followings by user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/6769094c343ffb140e70ead2/followings",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"6769094c343ffb140e70ead2",
+						"followings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "follow artist by user id and artist id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/6769094c343ffb140e70ead2/follow/67690953d00eb584ef0c2d2a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"6769094c343ffb140e70ead2",
+						"follow",
+						"67690953d00eb584ef0c2d2a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unfollow artist by user id and artist id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/6769094c343ffb140e70ead2/unfollow/67690953d00eb584ef0c2d2a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"6769094c343ffb140e70ead2",
+						"unfollow",
+						"67690953d00eb584ef0c2d2a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "songs route test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/songs/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"songs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all songs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/songs/all/get",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"songs",
+						"all",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get song by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/songs/6768e4bc8b629d70e0f7df16/get",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"songs",
+						"6768e4bc8b629d70e0f7df16",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query songs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/songs/query?artist=tlc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"songs",
+						"query"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "my heart will go on",
+							"disabled": true
+						},
+						{
+							"key": "album",
+							"value": "imagine",
+							"disabled": true
+						},
+						{
+							"key": "genre",
+							"value": "pop",
+							"disabled": true
+						},
+						{
+							"key": "language",
+							"value": "english",
+							"disabled": true
+						},
+						{
+							"key": "artist",
+							"value": "tlc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "artists route test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/artists",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all artists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/artists/all/get",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"artists",
+						"all",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get artist by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/artists/67690953d00eb584ef0c2d25/get",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"artists",
+						"67690953d00eb584ef0c2d25",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create artist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"artist\": \"Hardwell\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/artists/post",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"artists",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete artist by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/artists/67690953d00eb584ef0c2d25/delete",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"artists",
+						"67690953d00eb584ef0c2d25",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

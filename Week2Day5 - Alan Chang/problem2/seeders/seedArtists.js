@@ -48,3 +48,6 @@ import Artist from "../models/artistModel.js";
         console.log("Database connection closed");
     }
 })();
+
+
+// to seed data, run in root folder: node ./seeders/seedArtists.js
