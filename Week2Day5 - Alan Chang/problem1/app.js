@@ -18,7 +18,7 @@ app.get("/api", (_req, res) => {
 });
 
 app.get("*", (_req, res) => {
-    res.status(404).send("404 Page not found, try a different URL!");
+    res.status(404).send("404 page not found, try a different URL!");
 });
 
 

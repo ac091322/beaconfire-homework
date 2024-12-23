@@ -1,5 +1,6 @@
 import Todo from "../models/todoModel.js";
 
+
 // get all todos
 const getAllTodos = async (_req, res) => {
     try {
@@ -34,7 +35,7 @@ const createTodo = async (req, res) => {
         return res.status(201).json(createTodo);
 
     } catch (error) {
-        return res.status(500).send(`${error}`);
+        return res.status(500).send(error);
     }
 }
 
@@ -49,12 +50,14 @@ const editTodo = async (req, res) => {
     if (todoId.length !== 24) return res.status(409).json({ Error: "ID not proper format" });
 
     try {
-        const todoToUpdate = await Todo.findByIdAndUpdate(
-            todoId,
+        // uses any query to find a document and replaces the entire document with the provided data
+        // can also use findByIdAndReplace to find by _id and replace entire document
+        const todoToUpdate = await Todo.findOneAndReplace(
+            { _id: todoId },
             req.body,
-            { new: true } // option to return the updated document
+            { new: true, returnDocument: "after" } // option to return the updated document
         );
-        if (!todoToUpdate) return res.status(404).json({ Error: "ID not found" })
+        if (!todoToUpdate) return res.status(404).json({ Error: "Todo not found" })
 
         return res.status(200).send(`Todo with ID ${todoId} successfully edited in database`);
 
@@ -72,12 +75,14 @@ const editTodoStatus = async (req, res) => {
     if (todoId.length !== 24) return res.status(409).json({ Error: "ID not proper format" });
 
     try {
+        // finds a document using any query and partially updates the document
+        // can also use findByIdAndUpdate to find by _id and partially update the document
         const statusToUpdate = await Todo.findOneAndUpdate(
             { _id: todoId },  // edit document by id
             { $set: { status } },  // update only the status field
             { new: true }  // option to return the updated document
         );
-        if (!statusToUpdate) return res.status(404).json({ Error: "ID not found" });
+        if (!statusToUpdate) return res.status(404).json({ Error: "Todo not found" });
 
         return res.status(200).send(`Todo with ID ${todoId} updated in database`);
 
@@ -93,7 +98,7 @@ const deleteTodo = async (req, res) => {
 
     try {
         const todoToDelete = await Todo.findByIdAndDelete(todoId);
-        if (!todoToDelete) return res.status(404).json({ Error: "ID not found" });
+        if (!todoToDelete) return res.status(404).json({ Error: "Todo not found" });
 
         return res.status(200).send(`Todo with ID ${todoId} deleted from database`);
 

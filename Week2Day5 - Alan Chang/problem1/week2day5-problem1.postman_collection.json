@@ -62,7 +62,7 @@
 			"response": []
 		},
 		{
-			"name": "todos test",
+			"name": "todos route test",
 			"request": {
 				"method": "GET",
 				"header": [],

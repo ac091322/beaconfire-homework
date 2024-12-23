@@ -29,7 +29,7 @@ import Todo from "../models/todoModel.js";
         ];
 
         const todosInsert = await Todo.insertMany(todos);
-        console.log(`${todosInsert.length} todos inserted successfully.`);
+        console.log(`${todosInsert.length} todos inserted successfully`);
 
     } catch (error) {
         console.error(`Seed error: ${error}`);
