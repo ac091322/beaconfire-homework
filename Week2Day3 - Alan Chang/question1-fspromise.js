@@ -1,5 +1,5 @@
 const fsPromise = require("fs/promises");
-const { text } = require("stream/consumers");
+
 
 const randomNumbers = [];
 

@@ -8,6 +8,7 @@ import artistsRouter from "./routes/artistsRouter.js";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
+
 const app = express();
 
 const __filename = fileURLToPath(import.meta.url);

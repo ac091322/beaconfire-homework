@@ -1,6 +1,7 @@
 const EventEmitter = require("events");
 const fs = require("fs");
 
+
 class Chatroom extends EventEmitter {
     constructor(name) {
         super();

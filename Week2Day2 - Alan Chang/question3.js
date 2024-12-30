@@ -1,5 +1,6 @@
 export const randomUserContainer = document.getElementById("container-random-user-data");
 
+
 function delayedRequest(url) {
     setTimeout(() => {
         fetch(url, { method: "GET" })
@@ -26,8 +27,6 @@ function delayedRequest(url) {
                     `BS: ${data.company.bs}`
                 ]
 
-
-
                 userData.forEach(userText => {
                     const pTag = document.createElement("p");
                     pTag.textContent = userText;
@@ -47,7 +46,6 @@ document.getElementById("button-retrieve-random-user-data")
         let randomNum = Math.floor(Math.random() * 10) + 1;
         delayedRequest(`https://jsonplaceholder.typicode.com/users/${randomNum}`);
     });
-
 
 
 

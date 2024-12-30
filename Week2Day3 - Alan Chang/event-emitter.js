@@ -6,6 +6,7 @@
 
 const EventEmitter = require("events");
 
+
 // ChatRoom class that extends EventEmitter
 class ChatRoom extends EventEmitter {
     constructor(name) {
